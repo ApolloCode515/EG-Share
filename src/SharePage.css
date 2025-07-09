@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #1e3a8a;
+    --primary-light: #3b82f6;
+    --secondary-color: #34d399;
+    --whatsapp-green: #25D366;
+    --whatsapp-dark: #128C7E;
+    --light-gray: #e0f2fe;
+    --medium-gray: #dbeafe;
+    --dark-gray: #1f2937;
+    --white: #ffffff;
+    --star-color: #facc15;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.share-page {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    min-height: 100vh;
+    color: var(--white);
+}
+
+.share-container,
+.congrats-container,
+.reviews-section {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+/* Progress Bar Styles */
+/* .progress-container {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.progress-text,
+.share-count {
+    color: var(--dark-gray);
+}
+
+.progress {
+    height: 20px;
+    background: var(--medium-gray);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    transition: width 0.5s ease-in-out;
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%);
+    background-size: 20px 20px;
+    animation: move 2s linear infinite;
+} */
+
+/* Share Card Styles */
+.share-card {
+    background: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+.share-message p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 1.4;
+}
+
+.share-message p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.share-message p:nth-child(2),
+.share-message p:nth-child(3) {
+    background: var(--light-gray);
+    padding: 8px;
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.share-button {
+    background: linear-gradient(90deg, var(--whatsapp-green), var(--whatsapp-dark));
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    margin-right: 6px;
+    font-size: 1.2rem;
+}
+
+/* Rewards Info */
+.rewards-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.rewards-info ul {
+    list-style: none;
+}
+
+.rewards-info li {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+}
+
+.rewards-info li:before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.rewards-info li.unlocked {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.rewards-info li.unlocked:before {
+    content: '✓';
+    color: var(--secondary-color);
+}
+
+/* Congratulations Styles */
+.congrats-card {
+    background: var(--white);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.congrats-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.congrats-message {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+.app-link p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+.download-button {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 64, 175, 0.4);
+}
+
+.share-more p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+    animation: confetti 4s ease-in-out infinite;
+}
+
+.confetti:nth-child(1) {
+    background: var(--primary-light);
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.confetti:nth-child(2) {
+    background: var(--secondary-color);
+    left: 30%;
+    animation-delay: 0.5s;
+}
+
+.confetti:nth-child(3) {
+    background: #facc15;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.confetti:nth-child(4) {
+    background: #60a5fa;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.confetti:nth-child(5) {
+    background: var(--primary-color);
+    left: 90%;
+    animation-delay: 2s;
+}
+
+/* Reviews Section */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.add-review-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.add-review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.add-review-btn svg {
+    margin-right: 5px;
+}
+
+/* Review Form */
+.review-form {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.rating-group {
+    display: flex;
+    align-items: center;
+}
+
+.rating-group label {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.stars-input span {
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.star.filled {
+    color: var(--star-color);
+    text-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+}
+
+.star {
+    color: var(--medium-gray);
+    font-size: 1.2rem;
+}
+
+.submit-review-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+/* Reviews List */
+.reviews-list {
+    display: grid;
+    gap: 10px;
+}
+
+.review-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.review-time {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+.review-rating {
+    display: flex;
+}
+
+.review-content p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+
+    .share-page,
+    .share-container,
+    .congrats-container,
+    .reviews-section {
+        border-radius: 0;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* .progress-container,
+    .share-card,
+    .rewards-info,
+    .review-form,
+    .review-card {
+        box-shadow: none;
+    } */
+
+    .congrats-title {
+        font-size: 1.8rem;
+    }
+
+    .congrats-message {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .user-name {
+        font-size: 0.9rem;
+    }
+
+    .review-content {
+        font-size: 0.85rem;
+    }
+}
