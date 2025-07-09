@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './SharePage.css';
 import { FaWhatsapp, FaUserCircle, FaStar, FaRegStar, FaPen, FaClock } from 'react-icons/fa';
 import FeedbackDialog from './FeedbackDialog';
+import myImage from './logo.png';
 
 function SharePage() {
     const [progress, setProgress] = useState(0);
@@ -569,6 +570,13 @@ function SharePage() {
         </div>
     );
 
+    // const imageStyle = {
+    //     width: '250px',    // Fixed width (adjust as needed)
+    //     height: 'auto',
+    //     marginBottom: '10px'     // Keeps aspect ratio for horizontal logo
+    // };
+
+
     return (
 
         <div> {showDialog && <FeedbackDialog onClose={handleCloseDialog} />}
@@ -599,6 +607,11 @@ function SharePage() {
                             margin: '25px 0',
                             position: 'relative'
                         }}>
+
+
+                            {/* <img src={myImage} alt="Centered" style={imageStyle} /> */}
+
+
                             <h1 className="page-title" style={{
                                 fontSize: '1.6rem',
                                 // background: 'linear-gradient(to right, #1e3a8a, #3b82f6, #1e3a8a)',
@@ -983,7 +996,7 @@ function SharePage() {
                                         आता <strong style={{ color: '#ffffff' }}>एक्सपर्ट गुरुजी ॲप</strong> डाउनलोड करा आणि तुमचे बक्षीस मिळवा:
                                     </p>
                                     <a
-                                        href="https://expertguruji.com/download"
+                                        href="https://play.google.com/store/apps/details?id=com.spark.smartguruji"
                                         className="btn download-button"
                                         style={{
                                             display: 'inline-block',
