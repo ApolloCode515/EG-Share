@@ -10,7 +10,7 @@ function SharePage() {
     const [reviews, setReviews] = useState([]);
     const [newReview, setNewReview] = useState({ name: '', text: '', rating: 5 });
     const [showReviewForm, setShowReviewForm] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(2 * 60 * 60); // 2 hours in seconds
+    const [timeLeft, setTimeLeft] = useState(600); // 2 hours in seconds
     const [showDialog, setShowDialog] = useState(false);
 
     useEffect(() => {
@@ -701,9 +701,9 @@ function SharePage() {
                                     style={{
                                         width: `${progress}%`,
                                         height: '100%',
-                                        background: 'linear-gradient(90deg, #001f3f, #003366)',
+                                        // background: 'linear-gradient(90deg, #001f3f, #003366)',
                                         transition: 'width 0.5s ease-in-out, box-shadow 0.3s ease',
-                                        backgroundImage: 'linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%)',
+                                        // backgroundImage: 'linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%)',
                                         backgroundSize: '30px 30px',
                                         animation: 'move 2s linear infinite',
                                         borderRadius: '14px',
@@ -880,7 +880,8 @@ function SharePage() {
                             maxWidth: '800px',
                             margin: '0 auto',
                             background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)',
-                            borderRadius: '20px',
+                            borderBottomLeftRadius: '20px',
+                            borderBottomRightRadius: '20px',
                             marginBottom: '40px',
                             padding: '10px',
                             boxShadow: '0 8px 20px rgba(0, 0, 0, 0.3)',
@@ -934,7 +935,7 @@ function SharePage() {
                                 <h2 className="congrats-title" style={{
                                     fontSize: '2.2rem',
                                     color: '#ffffff',
-                                    marginTop: '20px',
+                                    marginTop: '16px',
                                     paddingTop: '10px',
                                     margin: '0 0 25px 0',
                                     textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
@@ -946,7 +947,7 @@ function SharePage() {
                                     color: 'transparent',
                                     animation: 'pulse 1.5s infinite alternate'
                                 }}>
-                                    अभिनंदन! 🎉
+                                    अभिनंदन!
                                 </h2>
 
                                 <div style={{
